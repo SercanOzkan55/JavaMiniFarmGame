@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\ASUS\Desktop\Oyun - Kopya - Kopya\.metadata\.plugins\org.eclipse.jdt.core
-1018451819.index
-1865797976.index
-4109276757.index
