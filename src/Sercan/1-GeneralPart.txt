@@ -1,0 +1,25 @@
+
+
+//In this piece, I will explain the parts we used in Object Oriented Programming in the project we did in general and what purpose these parts serve.
+
+//First of all, I would like to talk about the classes with inheritance content in the project. These are mainly classes such as object, entity, tile, etc.
+//It is possible to talk about inheritance for our other sub-part classes. Because the entity class is the class that interacts with the moving or non-moving player in the whole game and
+//returns feedback in response to this interaction. It has common features with other player-like entities that the user interacts with. Speed, their position on the map, their area of
+//operation, or the sprite sheets of the characters are a great example of this. Likewise, the object class serves the same purpose as the entity class, but the object class addresses
+//objects in the game. The common point of these objects such as trees, houses, bridges, etc. is the place, height and width of each object on the screen, the name, picture and collision
+//area of the objects.
+
+//To talk about our abstraction examples in the game, it is actually very correct to approach every function that we hide in different classes and call in the GameLoop loop, which is the
+//common center of the game, from this point of view. For example, player.updateChanges(), crop.update(currentTime), tileOp.draw(g2d), crop.isMature() playMusic(), stopMusic() and playSE(),
+//isOnMarket(), obj.draw(g2d, this) and npc. draw(g2d), these are only the ones in the GameLoop loop or calling the data belonging to our entity class in our player class, CollisionChecker 
+//for collision fields, KeyHandler are very important data for abstraction.
+
+//Next we have examples of polymorphism. First we can start with the draw method of the entity class, this method is considered invalid in many classes. For example, in the classes that I 
+//assigned as NPC or in the classes that make up our main character, the draw method varies according to the forms of the function and considers the way it works within its class valid. In 
+//addition, functions such as speak(), action(), update() have been modified to add a character-specific uniqueness in the classes within the objects themselves.
+
+//Our next feature is the points where we do encapsulation. The List-Map methods that I defined as private in GameLoop are examples of this. In addition to these, the getInventory and 
+//setInventory methods are also a good example of this because if the user wants to access this data, they can only access it by using the getter and setter methods, not directly. Also the 
+//same operations should be used to access the money on the user. Finally, the same thing applies to the variable we define as remainingTime, which is why it is defined as private.
+
+//These are the cornerstones of OOP and this game is both correct and sufficient to understand them.
